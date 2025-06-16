@@ -7,7 +7,8 @@ if command -v mise >/dev/null 2>&1; then
   echo "mise is already installed."
 else
   echo "Installing mise..."
-  curl https://mise.run | sh
+  # curl https://mise.run | sh
+  brew install mise
 fi
 
 mise settings set python_compile 1
