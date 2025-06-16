@@ -13,7 +13,7 @@ nvm install stable --latest-npm
 brew install --cask cursor
 
 # Arc Browser
-brew install --cask arc
+# brew install --cask arc
 
 # Raycast
 brew install --cask raycast
