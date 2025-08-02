@@ -89,6 +89,16 @@ bindkey '^S' history-incremental-search-forward
 alias gc-b='git checkout -b'
 alias gc-m='git commit -m'
 alias gp='git push'
+alias gw='git switch'
+alias gm='git merge'
+alias pr='gh pr create -d'
+
+# terraform
+alias tfp='terraform plan'
+alias tfr='terraform fmt -recursive'
+alias tfv='terraform validate'
+alias tfi='terraform import'
+alias tfs='terraform state'
 
 
 # 移動　共通
