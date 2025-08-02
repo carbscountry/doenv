@@ -88,7 +88,9 @@ bindkey '^S' history-incremental-search-forward
 # set alias for git & gh
 alias gc-b='git checkout -b'
 alias gc-m='git commit -m'
+alias gc-ma='git commit --amend --no-edit'
 alias gp='git push'
+alias gp-f='git push --force-with-lease'
 alias gw='git switch'
 alias gm='git merge'
 alias pr='gh pr create -d'
