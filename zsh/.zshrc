@@ -1,6 +1,7 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -12,7 +13,7 @@ fi
 # Pyenv configuration
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
 
 # Mise activation (development tool version manager)
 eval "$(~/.local/bin/mise activate zsh)"
@@ -107,8 +108,16 @@ alias tfs='terraform state'
 alias my='cd ~/'
 alias des='cd ~/Desktop'
 alias dwn='cd ~/Downloads'
-
+alias c='clear'
+alias cr='cursor'
+ 
 
 
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/masaki.tsukada/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/masaki.tsukada/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/masaki.tsukada/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/masaki.tsukada/google-cloud-sdk/completion.zsh.inc'; fi
