@@ -4,11 +4,6 @@
 # git
 brew install git
 
-# nvm & npm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-source ~/.zshrc
-nvm install stable --latest-npm
-
 # cursor
 brew install --cask cursor
 
@@ -19,4 +14,4 @@ brew install --cask cursor
 brew install --cask raycast
 
 # claude code
-npm install -g @anthropic-ai/claude-code
+brew install --cask claude-code
