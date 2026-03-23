@@ -15,3 +15,6 @@ brew install --cask raycast
 
 # claude code
 brew install --cask claude-code
+
+# display link
+brew install --cask displaylink
