@@ -11,3 +11,6 @@ set-gh:
 
 set-base:
 	bash ./base_install.sh
+
+set-claude:
+	bash ./claude/install.sh
